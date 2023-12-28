@@ -1,4 +1,3 @@
-images/
-sounds/
+/images
+/sounds
 git/
-css/
