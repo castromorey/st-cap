@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>US States and Capitals</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header"><p>U.S.A. 50 States and Capitals.</p></header>
+
+      <aside class="aside1">
+        <span class="gTitle-A"><p>U.S.A. STATES Group-A</p></span>
+        <div class="btnGroup-A">
+          <div class="bGA1">
+            <button class="btn state1"><p class="state">Alabama</p></button>
+            <button class="btn state2"><p class="state">Alaska</p></button>
+            <button class="btn state3"><p class="state">Arizona</p></button>
+            <button class="btn state4"><p class="state">Arkansas</p></button>
+            <button class="btn state5"><p class="state">California</p></button>
+            <button class="btn state6"><p class="state">Colorado</p></button>
+            <button class="btn state7"><p class="state">Connecticut</p></button>
+            <button class="btn state8"><p class="state">Delaware</p></button>
+            <button class="btn state9"><p class="state">Florida</p></button>
+            <button class="btn state10"><p class="state">Georgia</p></button>
+            <button class="btn state11"><p class="state">Hawaii</p></button>
+            <button class="btn state12"><p class="state">Idaho</p></button>
+          </div>
+
+          <div class="bGA2">
+            <button class="btn state13"><p class="state">Illinois</p></button>
+            <button class="btn state14"><p class="state">Indiana</p></button>
+            <button class="btn state15"><p class="state">Iowa</p></button>
+            <button class="btn state16"><p class="state">Kansas</p></button>
+            <button class="btn state17"><p class="state">Kentucky</p></button>
+            <button class="btn state18"><p class="state">Louisiana</p></button>
+            <button class="btn state19"><p class="state">Maine</p></button>
+            <button class="btn state20"><p class="state">Maryland</p></button>
+            <button class="btn state21">
+              <p class="state">Massachusetts</p>
+            </button>
+            <button class="btn state22"><p class="state">Michigan</p></button>
+            <button class="btn state23"><p class="state">Minnesota</p></button>
+            <button class="btn state24">
+              <p class="state">Mississippi</p>
+            </button>
+            <button class="btn state25"><p class="state">Missouri</p></button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <nav>
+          <div class="remain">
+            <span>Remain:</span>
+
+            <p class="countPos"></p>
+          </div>
+
+          <div class="faults">
+            faults:
+            <p class="countNeg"></p>
+          </div>
+        </nav>
+
+        <div class="mainBox-1">
+          <div class="Title-main">
+            <p>The Capital of <span class="question"></span></p>
+          </div>
+
+          <div class="btnGroup-C">
+            <div class="C1">
+              <button class="butn"><p class="cap1"></p></button>
+              <button class="butn"><p class="cap2"></p></button>
+            </div>
+
+            <div class="C2">
+              <button class="butn"><p class="cap3"></p></button>
+              <button class="butn"><p class="cap4"></p></button>
+            </div>
+          </div>
+        </div>
+        <div class="mainBox-2">
+          <div>
+            <img
+              src="/images/states/state-washington.webp"
+              alt="state"
+              class="photo"
+              width="250"
+              height="290"
+            />
+          </div>
+        </div>
+      </main>
+
+      <aside class="aside2">
+        <span class="gTitle-B"><p>U.S.A. STATES Group-B</p></span>
+        <div class="btnGroup-B">
+          <div class="bGB1">
+            <button class="btn state26"><p class="state">Montana</p></button>
+            <button class="btn state27"><p class="state">Nebraska</p></button>
+            <button class="btn state28"><p class="state">Nevada</p></button>
+            <button class="btn state29">
+              <p class="state">New Hampshire</p>
+            </button>
+            <button class="btn state30"><p class="state">New Jersey</p></button>
+            <button class="btn state31"><p class="state">New Mexico</p></button>
+            <button class="btn state32"><p class="state">New York</p></button>
+            <button class="btn state33">
+              <p class="state">North Carolina</p>
+            </button>
+            <button class="btn state34">
+              <p class="state">North Dakota</p>
+            </button>
+            <button class="btn state35"><p class="state">Ohio</p></button>
+            <button class="btn state36"><p class="state">Oklahoma</p></button>
+            <button class="btn state37"><p class="state">Oregon</p></button>
+          </div>
+
+          <div class="bGB2">
+            <button class="btn state38">
+              <p class="state">Pennsylvania</p>
+            </button>
+            <button class="btn state39">
+              <p class="state">Rhode Island</p>
+            </button>
+            <button class="btn state40">
+              <p class="state">South Carolina</p>
+            </button>
+            <button class="btn state41">
+              <p class="state">South Dakota</p>
+            </button>
+            <button class="btn state42"><p class="state">Tennessee</p></button>
+            <button class="btn state43"><p class="state">Texas</p></button>
+            <button class="btn state44"><p class="state">Utah</p></button>
+            <button class="btn state45"><p class="state">Vermont</p></button>
+            <button class="btn state46">
+              <p class="state"></p>
+              Virginia
+            </button>
+            <button class="btn state47">
+              <p class="state"></p>
+              Washington
+            </button>
+            <button class="btn state48">
+              <p class="state"></p>
+              West Virginia
+            </button>
+            <button class="btn state49">
+              <p class="state"></p>
+              Wisconsin
+            </button>
+            <button class="btn state50">
+              <p class="state"></p>
+              Wyoming
+            </button>
+          </div>
+        </div>
+      </aside>
+      <footer class="footer">
+        <!-- ojo con este code -->
+        <div id="result">
+          <div>
+            <button onclick="btnFaults()">Show faults</button>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="/js/script.js"></script>
+</html>
