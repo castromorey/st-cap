@@ -4,7 +4,7 @@ countNeg = 0;
 const audio = new Audio("sounds/wrong.mp3");
 const audio2 = new Audio("sounds/good.mp3");
 document.querySelector(".countPos").innerHTML = countPos;
-let photoDom = document.querySelector(".photo");
+// let photoDom = document.querySelector(".photo");
 const statesCap = [
   { state: "Alabama", capital: "Montgomery" },
   { state: "Alaska", capital: "Juneau" },
@@ -135,14 +135,14 @@ function state_name() {
   document.querySelector(".btnGroup-C").style.display = "block";
   chooseState = this.innerText;
   this.disabled = true;
-  this.classList.toggle("backg");
+  // this.classList.toggle("backg");
 
-  photoDom.src = "images/states/state-" + chooseState + ".webp";
+  // photoDom.src = "images/states/state-" + chooseState + ".webp";
 
   document.querySelector(".question").innerHTML = chooseState;
   finder = statesCap.find((stateFind) => stateFind.state === chooseState);
   floater = finder.capital;
-  document.querySelector(".photo").style.display = "block";
+  // photo
 
   if (capitalOnly1.includes(floater)) {
     document.querySelector(".cap4").textContent = floater;
@@ -177,17 +177,25 @@ for (j = 0; j < buttons2.length; j++) {
 
 let emptyArray = [];
 
+const myArray = ["stone", "paper", "scissors"];
+function btnFaults() {
+  myArray.forEach((el) => {
+    document.getElementById("result").innerHTML += `<div>${el}</div><br />`;
+    // here result is the id of the div present in the dom
+  });
+}
+
 function clicking() {
-  this.classList.add("wrong2");
+  // this.classList.add("wrong2");
   if (this.innerText != floater) {
     // mensaje.style.display = "block";
     // mensaje.innerHTML = "Sorry, try again";
 
-    emptyArray.push(finder);
-    // console.log(emptyArray);
+    emptyArray.push(finder.state);
+
     audio.play();
     countNeg = countNeg + 1;
-    this.classList.add("wrong");
+    // this.classList.add("wrong");
     document.querySelector(".countNeg").innerHTML = countNeg;
     setTimeout(function () {}, 1000);
   } else {
@@ -204,7 +212,7 @@ function clicking() {
     setTimeout(function () {
       // mensaje.classList.remove("message2");
       // mensaje.style.display = "none";
-      document.querySelector(".photo").style.display = "none";
+      // document.querySelector(".photo").style.display = "none";
       document.querySelector(".Title-main").style.display = "none";
       document.querySelector(".btnGroup-C").style.display = "none";
       document.querySelector(".cap3").textContent = "";
@@ -215,12 +223,10 @@ function clicking() {
   }
 }
 
-const myArray = emptyArray;
-console.log(myArray);
-// const myArray = ["stone", "paper", "scissors"];
+console.log(emptyArray);
 
 function btnFaults() {
-  myArray.forEach((el) => {
+  emptyArray.forEach((el) => {
     document.getElementById("result").innerHTML += `<div>${el}</div><br />`;
   });
 }
