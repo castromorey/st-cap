@@ -176,32 +176,31 @@ for (j = 0; j < buttons2.length; j++) {
 }
 
 let emptyArray = [];
-
-const myArray = ["stone", "paper", "scissors"];
-function btnFaults() {
-  myArray.forEach((el) => {
-    document.getElementById("result").innerHTML += `<div>${el}</div><br />`;
-    // here result is the id of the div present in the dom
-  });
-}
+let errorMessage = document.querySelector(".erroMessage");
+let goodMessage = document.querySelector(".goodmessage");
+let boxmessage = document.querySelector(".boxMessage");
+boxmessage.style.display = "none";
 
 function clicking() {
-  // this.classList.add("wrong2");
   if (this.innerText != floater) {
-    // mensaje.style.display = "block";
-    // mensaje.innerHTML = "Sorry, try again";
-
     emptyArray.push(finder.state);
-
     audio.play();
+    boxmessage.style.display = "block";
+    errorMessage.style.display = "block";
+
     countNeg = countNeg + 1;
-    // this.classList.add("wrong");
+
     document.querySelector(".countNeg").innerHTML = countNeg;
-    setTimeout(function () {}, 1000);
+    setTimeout(function () {
+      errorMessage.style.display = "none";
+      boxmessage.style.display = "none";
+    }, 1000);
   } else {
-    // mensaje.style.display = "block";
+    goodMessage.style.display = "block";
+    boxmessage.style.display = "block";
+    boxmessage.classList.add("borderg");
+
     // document.querySelector(".photo").style.display = "none";
-    // mensaje.innerHTML = "Huraaa, congratulations";
 
     audio2.play();
     // mensaje.classList.add("message2");
@@ -210,9 +209,11 @@ function clicking() {
     document.querySelector(".countPos").innerHTML = countPos;
 
     setTimeout(function () {
-      // mensaje.classList.remove("message2");
-      // mensaje.style.display = "none";
+      goodMessage.style.display = "none";
       // document.querySelector(".photo").style.display = "none";
+      boxmessage.classList.remove("borderg");
+      boxmessage.style.display = "none";
+
       document.querySelector(".Title-main").style.display = "none";
       document.querySelector(".btnGroup-C").style.display = "none";
       document.querySelector(".cap3").textContent = "";
@@ -222,8 +223,6 @@ function clicking() {
     }, 1000);
   }
 }
-
-console.log(emptyArray);
 
 function btnFaults() {
   emptyArray.forEach((el) => {

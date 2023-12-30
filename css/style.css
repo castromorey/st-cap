@@ -62,10 +62,10 @@ nav, .remain, .faults{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    background-color: white;
     flex-basis: 50%;
-    color: red;
+    background-image: url(/images/flag.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -94,6 +94,15 @@ nav, .remain, .faults{
 .footer{
     grid-area: footer;
     background-color: darkkhaki;
+    
+}
+
+.btn-faults{
+    display: flex;
+}
+
+.btn-faults{
+    margin: 6px 0px 0px 5px;
 }
 
 /* CSS main parte */ 
@@ -175,17 +184,40 @@ nav, .remain, .faults{
 
 
 
-/* 
-.message2{ */
-    /* margin-top: 15px; */
-    /* color: green; */
-    /* font-size: 25px; */
-/* } */
+
+.erroMessage{ 
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+    display: none;
+  
+}
+
+.goodmessage{
+    color: green;
+    font-size: 25px;
+    font-weight: bold;
+    display: none;
+  
+}
+
+.boxMessage{
+    padding-top: 30px;
+    width: 400px;
+    height: 100px;
+    border-radius: 10px;
+    border: solid thin rgb(233, 180, 180); 
+    box-shadow: inset rgb(226, 163, 163) 0px 0px 60px -12px;
+ 
+  
+}
+
+.borderg{
+    border: solid thin rgb(208, 236, 208); 
+    box-shadow: inset rgb(178, 224, 178) 0px 0px 60px -12px;
+}
 
 .backg{
     background-color:steelblue;
 }
 
-.wrong{
-    color: red;
-}
