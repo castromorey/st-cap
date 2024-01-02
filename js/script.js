@@ -1,4 +1,12 @@
-let chooseState, i, countPos, countNeg, finder, floater, disabler, photographer;
+let chooseState,
+  i,
+  j,
+  countPos,
+  countNeg,
+  finder,
+  floater,
+  disabler,
+  photographer;
 countPos = 50;
 countNeg = 0;
 const audio = new Audio("sounds/wrong.mp3");
@@ -130,11 +138,16 @@ for (i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", state_name);
 }
 
+let statesArray = [];
+
 function state_name() {
   document.querySelector(".Title-main").style.display = "block";
   document.querySelector(".btnGroup-C").style.display = "block";
   chooseState = this.innerText;
-  this.disabled = true;
+
+  statesArray.push(chooseState);
+  console.log(statesArray);
+
   // this.classList.toggle("backg");
 
   // photoDom.src = "images/states/state-" + chooseState + ".webp";
@@ -142,6 +155,7 @@ function state_name() {
   document.querySelector(".question").innerHTML = chooseState;
   finder = statesCap.find((stateFind) => stateFind.state === chooseState);
   floater = finder.capital;
+  // this.disabled = true;
   // photo
 
   if (capitalOnly1.includes(floater)) {
@@ -196,6 +210,7 @@ function clicking() {
       boxmessage.style.display = "none";
     }, 1000);
   } else {
+    console.log(chooseState);
     goodMessage.style.display = "block";
     boxmessage.style.display = "block";
     boxmessage.classList.add("borderg");
@@ -230,6 +245,18 @@ function btnFaults() {
   });
 }
 
+disabler = document.querySelectorAll(".state");
+for (j = 0; j < disabler.length; j++) {
+  disabler[j].addEventListener("click", disabling);
+}
+
+function disabling() {
+  let aux = this.innerText;
+  console.log(aux);
+  if (aux == statesArray) {
+    aux.disabled = true;
+  }
+}
 /* 
 
 <script>
