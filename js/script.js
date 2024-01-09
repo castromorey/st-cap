@@ -1,11 +1,12 @@
 let chooseState,
   i,
+  aux,
   j,
   countPos,
   countNeg,
   finder,
   floater,
-  disabler,
+  // disabler,
   photographer;
 countPos = 50;
 countNeg = 0;
@@ -155,7 +156,9 @@ function state_name() {
   document.querySelector(".question").innerHTML = chooseState;
   finder = statesCap.find((stateFind) => stateFind.state === chooseState);
   floater = finder.capital;
-  // this.disabled = true;
+  this.disabled = true;
+
+  //codificar aqui qque si innextext es iagual chooseState y floater = a findercapital desactive el bton del estado
   // photo
 
   if (capitalOnly1.includes(floater)) {
@@ -194,6 +197,19 @@ let errorMessage = document.querySelector(".erroMessage");
 let goodMessage = document.querySelector(".goodmessage");
 let boxmessage = document.querySelector(".boxMessage");
 boxmessage.style.display = "none";
+
+// disabler = document.querySelectorAll(".state");
+// for (j = 0; j < disabler.length; j++) {
+//   disabler[j].addEventListener("click", disabling);
+// }
+
+// function disabling() {
+//   aux = statesArray;
+//   if (this.innerText == aux) {
+//     document.querySelector("state").innerHTML.add("backg");
+//     this.Disabled = true;
+//   }
+// }
 
 function clicking() {
   if (this.innerText != floater) {
@@ -245,18 +261,6 @@ function btnFaults() {
   });
 }
 
-disabler = document.querySelectorAll(".state");
-for (j = 0; j < disabler.length; j++) {
-  disabler[j].addEventListener("click", disabling);
-}
-
-function disabling() {
-  let aux = this.innerText;
-  console.log(aux);
-  if (aux == statesArray) {
-    aux.disabled = true;
-  }
-}
 /* 
 
 <script>
